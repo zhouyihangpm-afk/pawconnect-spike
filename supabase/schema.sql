@@ -45,6 +45,14 @@ create table public.applications (
   submitted_at        timestamptz not null default now()
 );
 
+-- ---------- Table privileges ----------
+-- Newer Supabase projects do not grant table access to the API roles automatically,
+-- so grant exactly what the app needs. RLS below then restricts rows.
+grant usage on schema public to anon, authenticated;
+grant select on public.shelters, public.pets to anon, authenticated;
+grant insert, update on public.pets to authenticated;
+grant select, update on public.applications to authenticated;
+
 -- ---------- Row Level Security ----------
 alter table public.shelters     enable row level security;
 alter table public.pets         enable row level security;
