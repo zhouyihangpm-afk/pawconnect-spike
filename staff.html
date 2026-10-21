@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staff – PawConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">PawConnect</a>
+    <a href="pets.html">Pets</a>
+    <a href="track.html">Track application</a>
+    <a href="staff.html">Staff</a>
+  </header>
+  <main>
+    <h1>Staff area</h1>
+    <form id="login-form" class="hidden" novalidate>
+      <label for="email">Staff email</label>
+      <input id="email" name="email" type="email" autocomplete="username">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password">
+      <p id="login-message" class="error" role="alert"></p>
+      <button type="submit">Sign in</button>
+    </form>
+    <section id="app-section" class="hidden">
+      <p>Signed in as <span id="staff-email"></span> <button id="sign-out" type="button">Sign out</button></p>
+      <h2>Applications</h2>
+      <p id="status"></p>
+      <table>
+        <thead><tr><th>Application ID</th><th>Pet</th><th>Applicant</th><th>Status</th><th>Submitted</th></tr></thead>
+        <tbody id="app-rows"></tbody>
+      </table>
+    </section>
+  </main>
+  <script type=module src=js/staff.js></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply – PawConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">PawConnect</a>
+    <a href="pets.html">Pets</a>
+    <a href="track.html">Track application</a>
+    <a href="staff.html">Staff</a>
+  </header>
+  <main>
+    <h1>Adoption application</h1>
+    <p id="pet-info">Loading pet…</p>
+    <form id="apply-form" class="hidden" novalidate>
+      <label for="name">Your name *</label>
+      <input id="name" name="name" type="text">
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="email">
+      <label for="reason">Why would you like to adopt this pet? *</label>
+      <textarea id="reason" name="reason" rows="5"></textarea>
+      <p id="form-message" class="error" role="alert"></p>
+      <button type="submit">Submit application</button>
+    </form>
+  </main>
+  <script type=module src=js/apply.js></script>
+</body>
+</html>

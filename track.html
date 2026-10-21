@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track application – PawConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">PawConnect</a>
+    <a href="pets.html">Pets</a>
+    <a href="track.html">Track application</a>
+    <a href="staff.html">Staff</a>
+  </header>
+  <main>
+    <h1>Track your application</h1>
+    <form id="track-form" novalidate>
+      <label for="app-id">Application ID (e.g. APP-1004)</label>
+      <input id="app-id" name="app-id" type="text">
+      <button type="submit">Check status</button>
+    </form>
+    <div id="result" role="status"></div>
+  </main>
+  <script type=module src=js/track.js></script>
+</body>
+</html>
